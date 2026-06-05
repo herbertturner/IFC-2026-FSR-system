@@ -1,16 +1,30 @@
-# 2026-IFC-FSRsystem
-# Session on developing a Funding Surveillance and Response System for fatherhood programs
+# Funding What Works 2026
 
-This repository contains the interactive HTML notebook for participant pre‑work.
+This is the participant pre-work notebook for the session on developing a **Funding Surveillance and Response System (FSR System)** for fatherhood programs. 
+
+The notebook is structured around the key modules of the session. Participants can use this interactive space to log notes, capture main ideas, and build a personalized framework as they follow the presentations. 
+
+---
 
 ## Contents
-- Interactive notebook (HTML)
-- Supporting assets (images, data, etc.)
-- Instructions for participants
+
+* **Interactive Notebook (HTML):** The primary digital workspace for logging session insights and notes.
+* **Participant Handouts & Tools:** Direct access to framework sheets, logic models, and mapping documents.
+* **Supporting Assets:** Integrated graphics, layout styling, and structural repository resources.
+
+---
 
 ## How to Use
-The notebook will be available as a live webpage once uploaded.
 
-## Contact
-Herb Turner, Analytica, Inc.
-215.808.8880
+This notebook is provided prior to the session so that participants can familiarize themselves with the modules, download the accompanying resources, and prepare their local workspace in advance. 
+
+*Your notes auto-save locally to your web browser, ensuring you do not lose your input if you refresh the page.*
+
+---
+
+## Contact & Support
+
+**Herb Turner**, Analytica Insights, Inc.  
+📧 [herb@analytica-inc.com](mailto:herb@analytica-inc.com)  
+📞 215.808.8880
+
