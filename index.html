@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funding What Works 2026 - Participant Notebook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f9fafb; color: #111827; }
+        .notebook-card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; }
+        .instruction-card { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; }
+        textarea { width: 100%; min-height: 150px; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 4px; resize: vertical; }
+        .handout-link { color: #2563eb; text-decoration: underline; font-size: 0.875rem; display: block; margin-top: 0.25rem; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <header class="mb-8 flex items-center justify-between border-b pb-6">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Funding What Works 2026</h1>
+            <p class="text-gray-600">Participant Notebook</p>
+        </div>
+        <img src="assets/images/workshoplogo.png" alt="Workshop Logo" class="h-20 w-auto rounded shadow-sm">
+    </header>
+
+    <main class="max-w-3xl mx-auto" id="notebook-container">
+        
+        <div class="instruction-card">
+            <h2 class="font-semibold text-lg mb-2 text-blue-900">How to Use this Notebook</h2>
+            <p class="text-gray-700 text-sm">The purpose of this notebook is to provide you with an online space to jot down key ideas, takeaways, and thoughts about what the presenter covers in each section of the workshop. Because your notes are saved locally in your browser, you can refer back to them during the Certification activity.</p>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="notebook-card">
+            <h2 class="font-semibold text-lg">Section 1: The Funding Landscape Reality</h2>
+            <a href="assets/documents/IFC 2026 Participant Handout Powerpoint (Sections 1 - 4).docx" class="handout-link">Download: FNSRS Capacity Self-Assessment</a>
+            <textarea id="note-sec1" placeholder="Take notes here..." oninput="autoSaveNote('sec1')"></textarea>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="notebook-card">
+            <h2 class="font-semibold text-lg">Section 2: Opportunity Intelligence</h2>
+            <a href="assets/documents/IFC 2026 Participant Handout Powerpoint (Sections 1 - 4).docx" class="handout-link">Download: Opportunity Scoring Matrix</a>
+            <textarea id="note-sec2" placeholder="Take notes here..." oninput="autoSaveNote('sec2')"></textarea>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="notebook-card">
+            <h2 class="font-semibold text-lg">Section 3: Readiness Assessment & Logic Models</h2>
+            <a href="assets/documents/IFC 2026 Handout Logic Model Framework.pdf" class="handout-link">Download: Logic Model Framework</a>
+            <textarea id="note-sec3" placeholder="Take notes here..." oninput="autoSaveNote('sec3')"></textarea>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="notebook-card">
+            <h2 class="font-semibold text-lg">Section 4: Mapping Outcomes</h2>
+            <a href="assets/documents/IFC 2026 Handout Outcomes Table.docx" class="handout-link">Download: Outcomes Table</a>
+            <textarea id="note-sec4" placeholder="Take notes here..." oninput="autoSaveNote('sec4')"></textarea>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="notebook-card">
+            <h2 class="font-semibold text-lg">Section 5: Implementation & The 90-Day Plan</h2>
+            <a href="assets/documents/IFC 2026 Participant Handout Powerpoint (Sections 1 - 4).docx" class="handout-link">Download: 90-Day Funding Opportunity Calendar</a>
+            <textarea id="note-sec5" placeholder="Take notes here..." oninput="autoSaveNote('sec5')"></textarea>
+        </div>
+    </main>
+
+    <footer class="max-w-3xl mx-auto mt-12 pt-6 border-t border-gray-300 text-sm text-gray-500 text-center">
+        <p>© 2026 Funding What Works Workshop Notebook</p>
+        <p>Analytica Insights, Inc. & NPCL</p>
+    </footer>
+
+    <script>
+        const sections = ['sec1', 'sec2', 'sec3', 'sec4', 'sec5'];
+
+        window.onload = () => {
+            sections.forEach(id => {
+                const saved = localStorage.getItem(`fsr_note_${id}`);
+                const element = document.getElementById(`note-${id}`);
+                if(saved && element) element.value = saved;
+            });
+        };
+
+        function autoSaveNote(id) {
+            const val = document.getElementById(`note-${id}`).value;
+            localStorage.setItem(`fsr_note_${id}`, val);
+        }
+    </script>
+</body>
+</html>
